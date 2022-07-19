@@ -54,8 +54,8 @@ Cudos Blast can be used through a local installation in your project or by insta
 Create an npm project by going to an empty folder, then run
 `npm init`
  and follow the instructions. Once your project is ready, run 
-`npm install cudos-blast`
- To use your local installation of Cudos Blast, use `npx blast`
+`npm install cudos-blast`.
+ To use your local installation of Cudos Blast, use `npx blast`.
 
 ### Global Installation
 
@@ -422,19 +422,19 @@ Here are Cudos nodes you can use to connect to Cudos network:
 
 | Chain ID               | URL                                            |
 | ---                    | ---                                            |
-| cudos-testnet-public-2 | https://sentry1.gcp-uscentral1.cudos.org:36657 |
+| cudos-testnet-public-3 | https://sentry1.gcp-uscentral1.cudos.org:36657 |
 
 ### Mainnet
 
-| Chain ID | URL |
-| ---      | --- |
-|          |     |
+| Chain ID       | URL                   |
+| ---            | ---                   |
+|    cudos-1     | https://rpc.cudos.org |
 
 ---
 ## Managing accounts
 
 By default local Cudos node starts with 10 predefined accounts funded with `acudos`. You can set how many additional random accounts to load when starting a local node in `blast.config.js` under `additionalAccounts`. If any additional accounts are added, `customAccountBalances` field must be set for the amount of tokens that these accounts will be funded with. Predefined and additionally generated accounts are written in `{project_root}/local-accounts.json`. Another way to manage custom accounts is through `blast keys` command.  
-You can put your private accounts in `{project_root}/private-accounts.json`. Initializing a new project automatically adds this file to `.gitignore`. **Make sure you keep `private-accounts.json` in `.gitignore` in order to prevent accidentally committing and exposing your private accounts.** 
+You can put your private accounts in `{project_root}/private-accounts.json`. Initializing a new project automatically adds this file to `.gitignore`. **Make sure you keep `private-accounts.json` in `.gitignore` in order to prevent accidentally committing and exposing your private accounts.**. The `private-accounts.json` file is mainly meant to have existing accounts in other networks (testnet, mainnet, etc). If you also want to have these accounts in your local environment, make sure [you add them to your local node keyring](https://docs.cudos.org/build/fundnodes.html#stashing-the-wallet-keys).
 
 ### Listing local node accounts
 
