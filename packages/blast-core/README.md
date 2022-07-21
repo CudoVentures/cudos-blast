@@ -100,7 +100,7 @@ You can also specify the full directory of the project using optional parameter 
 blast init --dir /Your/Location/Here
 ```
 
-The project is now ready to work with the Cudos blockchain. It contains sample smart contracts and scripts to deploy or interact.  
+The project is now ready to work with the Cudos blockchain. It contains sample smart contracts and scripts to deploy or interact. The new project's `npm` dependencies are automatically installed.  
 > Make sure to initialize a new project in a directory other than the local repository folder, or else `cudos-blast` will break and the repository have to be cloned again.  
 > Also, all `blast` commands are designed to be executed from the project root directory.
 

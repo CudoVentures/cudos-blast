@@ -22,7 +22,7 @@
         "install-global": "npm install -g"
     },
     "engines": {
-        "node": ">=12.5.0"
+        "node": ">=14.15.0"
     },
     "dependencies": {
         "axios": "^0.26.0",

@@ -32,6 +32,8 @@ Cargo.toml
 blast.config.js
 contracts
 jsconfig.json
+node_modules
+package-lock.json
 package.json
 private-accounts.json
 scripts

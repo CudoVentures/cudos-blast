@@ -1,6 +1,7 @@
 const fs = require('fs')
 const fsExtra = require('fs-extra')
 const path = require('path')
+const { spawnSync } = require('child_process')
 
 const { getPackageRootPath } = require('../../utilities/package-info')
 const BlastError = require('../../utilities/blast-error')
@@ -15,8 +16,14 @@ async function initCmd(argv) {
   } catch (error) {
     throw new BlastError(`Error copying folder: ${error}`)
   }
+  console.log(`Sample project initialized in ${argv.dir !== '.' ? argv.dir : process.cwd()}`)
 
-  console.log(`Success! Sample project initialized in ${argv.dir !== '.' ? argv.dir : process.cwd()}`)
+  console.log('Installing default dependencies...')
+  spawnSync(`npm install --prefix "${argv.dir}"`, {
+    stdio: 'inherit',
+    shell: true
+  })
+  console.log('Project is ready')
 }
 
 function handleCustomDirCreation(argv) {

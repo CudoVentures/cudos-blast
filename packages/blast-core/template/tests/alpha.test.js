@@ -2,7 +2,7 @@ const bre = require('cudos-blast')
 
 describe('alpha contract', () => {
   // Optional timeout. Default is 15000
-  jest.setTimeout(30 * 1000);
+  jest.setTimeout(30 * 1000)
 
   const MSG_INIT = { count: 13 }
   const MSG_INCREMENT = { increment: {} }

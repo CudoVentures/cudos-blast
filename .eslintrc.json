@@ -9,7 +9,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "ignorePatterns": ["*.test.js"],
+    "ignorePatterns": ["**/template/tests", "**/template/scripts"],
     "rules": {
         "space-before-function-paren": ["error", {
             "anonymous": "never",
